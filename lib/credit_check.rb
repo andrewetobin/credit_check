@@ -42,6 +42,15 @@ class CreditCheck
     end
   end
 
+  def response
+    if valid? == true
+      "The number is valid!"
+    else
+      "The number is invalid!"
+    end
+  end
+
+
 
 
 
