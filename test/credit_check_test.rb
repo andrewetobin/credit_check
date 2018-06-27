@@ -4,6 +4,13 @@ require './lib/credit_check'
 
 class CreditCheckTest < Minitest::Test
 
+  def test_it_exists
+    cc = CreditCheck.new("4929735477250543")
+
+    assert_instance_of CreditCheck, cc
+
+  end
+
   def test_it_can_reverse_string_array_of_intergers
     cc = CreditCheck.new("4929735477250543")
 
@@ -29,6 +36,12 @@ class CreditCheckTest < Minitest::Test
     cc = CreditCheck.new("4929735477250543")
 
     assert_equal 80, cc.sum
+  end
+
+  def test_it_can_determine_if_valid
+    cc = CreditCheck.new("4929735477250543")
+
+    assert_equal true, cc.valid?
   end
 
 

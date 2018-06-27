@@ -31,7 +31,15 @@ class CreditCheck
   end
 
   def sum
-    sum_over_9.sum 
+    sum_over_9.sum
+  end
+
+  def valid?
+    if sum % 10 == 0
+      true
+    else
+      false
+    end
   end
 
 
