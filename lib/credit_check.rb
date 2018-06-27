@@ -20,15 +20,23 @@ class CreditCheck
     end
   end
 
-  def add
+  def sum_over_9
     double.map do |number|
       if number > 9
         number.digits.sum
       else
         number
       end
-    end 
+    end
   end
+
+  def sum
+    sum_over_9.sum 
+  end
+
+
+
+
 
 
 
