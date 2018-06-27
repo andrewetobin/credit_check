@@ -52,16 +52,16 @@ class CreditCheckTest < Minitest::Test
     cc_1 = CreditCheck.new("4929735477250543")
     cc_2 = CreditCheck.new("5541801923795240")
 
-    assert_equal true, cc_1.valid?
-    assert_equal false, cc_2.valid?
+    assert_equal true, cc_1.valid_number?
+    assert_equal false, cc_2.valid_number?
   end
 
   def test_it_can_print_correct_response
     cc_1 = CreditCheck.new("4929735477250543")
     cc_2 = CreditCheck.new("5541801923795240")
 
-    assert_equal "The number is valid!", cc_1.response
-    assert_equal "The number is invalid!", cc_2.response
+    assert_equal "The number 4929735477250543 is valid!", cc_1.validation_output
+    assert_equal "The number 5541801923795240 is invalid!", cc_2.validation_output
   end
 
   # def test_runner_method

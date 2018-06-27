@@ -43,7 +43,7 @@ class CreditCheck
     sum_over_9.sum
   end
 
-  def valid?
+  def valid_number?
     if sum % 10 == 0
       true
     else
@@ -51,11 +51,11 @@ class CreditCheck
     end
   end
 
-  def response
-    if valid? == true
-      "The number is valid!"
+  def validation_output
+    if valid_number? == true
+      "The number #{@cc_num.to_i} is valid!"
     else
-      "The number is invalid!"
+      "The number #{@cc_num.to_i} is invalid!"
     end
   end
 
