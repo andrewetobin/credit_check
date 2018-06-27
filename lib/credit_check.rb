@@ -10,10 +10,27 @@ class CreditCheck
     @cc_num.to_i.digits
   end
 
-  def double_every_other
-    reverse.map_with_index | 
-
+  def double
+    reverse.map.with_index do |digit, index|
+      if index.odd?
+        digit *= 2
+      else
+        digit
+      end
+    end
   end
+
+  def add
+    double.map do |number|
+      if number > 9
+        number.digits.sum
+      else
+        number
+      end
+    end 
+  end
+
+
 
 
 end
