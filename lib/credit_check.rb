@@ -6,6 +6,15 @@ class CreditCheck
     @cc_num = cc_num
   end
 
+  # def validate
+  #   reversed = reverse(@cc_num)
+  #   doubled = double(reverse)
+  #   summed = sum_over_9(doubled)
+  #   total = sum(summed)
+  #   validated = valid?(total)
+  #   answer = response(validated)
+  # end
+
   def reverse
     @cc_num.to_i.digits
   end
@@ -49,13 +58,5 @@ class CreditCheck
       "The number is invalid!"
     end
   end
-
-
-
-
-
-
-
-
 
 end
