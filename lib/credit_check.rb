@@ -1,19 +1,5 @@
 class CreditCheck
-  # attr_reader :cc_num
 
-
-  # def initialize(cc_num)
-  #   @cc_num = cc_num.to_i
-  # end
-
-  # def validate
-  #   reversed = reverse(@cc_num)
-  #   doubled = double(reverse)
-  #   summed = sum_over_9(doubled)
-  #   total = sum(summed)
-  #   validated = valid?(total)
-  #   answer = valid_number?(validated)
-  # end
   def valid_number?(card_number)
     reversed = reverse(card_number)
     doubled = double(reversed)
@@ -23,7 +9,7 @@ class CreditCheck
   end
 
   def validation_output(card_number)
-    if validate(card_number) == true
+    if valid_number?(card_number)
       "The number #{card_number.to_i} is valid!"
     else
       "The number #{card_number.to_i} is invalid!"
@@ -65,7 +51,4 @@ class CreditCheck
       false
     end
   end
-
-
-
 end
