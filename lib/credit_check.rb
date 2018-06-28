@@ -21,23 +21,27 @@ class CreditCheck
   end
 
   def double(reversed)
-    reversed.map.with_index do |digit, index|
+    doubled = []
+    reversed.each.with_index do |digit, index|
       if index.odd?
-        digit *= 2
+        doubled << digit *= 2
       else
-        digit
+        doubled << digit
       end
     end
+    return doubled
   end
 
   def sum_over_9(doubled)
-    doubled.map do |number|
+    summed = []
+    doubled.each do |number|
       if number > 9
-        number.digits.sum
+        summed << number.digits.sum
       else
-        number
+        summed << number
       end
     end
+    return summed 
   end
 
   def sum(summed)
