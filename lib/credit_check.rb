@@ -41,7 +41,7 @@ class CreditCheck
         summed << number
       end
     end
-    return summed 
+    return summed
   end
 
   def sum(summed)
